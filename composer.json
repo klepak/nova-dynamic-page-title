@@ -1,0 +1,29 @@
+{
+    "name": "klepak/nova-dynamic-page-title",
+    "description": "Dynamically updates Laravel Nova page title based on data from Vue router.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Klepak\\NovaDynamicPageTitle\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Klepak\\NovaDynamicPageTitle\\AssetServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
