@@ -39,6 +39,8 @@ Nova.booting((Vue, router, store) => {
                 label = resourceMeta.singularLabel + " Details"
             else if(to.name == "edit-attached")
                 label = "Edit " + resourceMeta.singularLabel + " -> " + relatedResourceMeta.singularLabel
+            else if(to.name == "lens")
+                label = to.params.lens.split("-").map(_.startCase).join(" ") + " Lens | " + resourceMeta.label
             else
                 label = _.startCase(to.name) + " " + resourceMeta.singularLabel
         }
