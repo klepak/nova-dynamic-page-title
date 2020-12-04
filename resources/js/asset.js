@@ -50,7 +50,11 @@ Nova.booting((Vue, router, store) => {
                 label = _.startCase(to.name)
         }
 
-        document.title = label + " | " + originalTitle
+        if(originalTitle && originalTitle !== ""){
+            document.title = label + " | " + originalTitle
+        } else {
+            document.title = label
+        }
 
         next()
     })
